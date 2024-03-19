@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Shapes;
+using MahApps.Metro.IconPacks;
 
 namespace mmdetection_application.UserControls
 {
@@ -13,5 +13,23 @@ namespace mmdetection_application.UserControls
         {
             InitializeComponent();
         }
+
+        public PackIconMaterialKind Icon
+        {
+            get { return (PackIconMaterialKind) GetValue(IconProperty); }
+            set { SetValue(IconProperty, value); }
+        }
+
+        public static readonly DependencyProperty IconProperty =
+            DependencyProperty.Register("", typeof(PackIconMaterialKind), typeof(Menubutton));
+
+        public bool IsActive
+        {
+            get { return (bool)GetValue(IsActiveProperty); }
+            set { SetValue(IsActiveProperty, value); }
+        }
+
+        public static readonly DependencyProperty IsActiveProperty =
+            DependencyProperty.Register("IsActive", typeof(bool), typeof(Menubutton));
     }
 }
