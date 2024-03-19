@@ -3,9 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:uc="clr-namespace:mmdetection_application.UserControls"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
-        Title="MainWindow" Height="760" Width="1280" ResizeMode="NoResize" AllowsTransparency="True"
+        Height="760" Width="1280" ResizeMode="NoResize" AllowsTransparency="True"
         WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent">
-    <Border CornerRadius="25" Background="#151f2d" MouseDown="Border_MouseDown">
+    <Border CornerRadius="25" Background="#151719" MouseDown="Border_MouseDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
@@ -19,29 +19,32 @@
             </Grid.RowDefinitions>
             
             <!--Left Menu-->
-            <Border Grid.RowSpan="3" Background="#1e2e44" CornerRadius="25 0 0 25">
+            <Border Grid.RowSpan="3" Background="#202124" CornerRadius="25 0 0 25">
                 <Grid>
                     <StackPanel VerticalAlignment="Top">
                         <!--Ellipses-->
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 40">
-                            <Ellipse Width="8" Height="8" Fill="#eb1700"/>
-                            <Ellipse Width="8" Height="8" Fill="#ffaf01" Margin="7 0"/>
-                            <Ellipse Width="8" Height="8" Fill="#009d00"/>
                         </StackPanel>
-                    </StackPanel>
-                    
-                    <!--Menu Buttons-->
-                    <uc:Menubutton Icon="HomeVariant" IsActive="True" Loaded="Menubutton_Loaded"/>
-                    <uc:Menubutton Icon="Finance"/>
-                    <uc:Menubutton Icon="CommentMultipleOutline"/>
-                    <uc:Menubutton Icon="AccountSearchOutline"/>
-                    <uc:Menubutton Icon="BookSyncOutline"/>
-                    <uc:Menubutton Icon="AlertCircleCheckOutline"/>
-                    <uc:Menubutton Icon="CogOutline"/>
 
+                        <!--Menu Buttons-->
+                        <uc:Menubutton Icon="HomeVariant" IsActive="True" />
+                        <uc:Menubutton Icon="DatabaseSyncOutline"/>
+                        <uc:Menubutton Icon="brain"/>
+                        <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>
+                        <uc:Menubutton Icon="ChartBellCurveCumulative"/>
+                    </StackPanel>
+
+                    <uc:Menubutton Icon="Power" VerticalAlignment="Bottom"/>
 
                 </Grid>
             </Border>
+            
+            <!--Application Buttons-->
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="20 0 0 0" HorizontalAlignment="Right">
+                <Button Style="{StaticResource topMenuButton}">
+                    <Icon:PackIconMaterial Kind="minus" Style="{StaticResource topMenuButtonIcon}"/>
+                </Button>
+            </StackPanel>
         </Grid>
     </Border>
 </Window>
