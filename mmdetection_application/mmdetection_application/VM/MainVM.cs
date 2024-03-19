@@ -8,6 +8,11 @@ namespace mmdetection_application.VM
 {
     class MainVM : NotificationObject
     {
-
+        /// <summary>
+        /// MainVMのコンストラクタ
+        /// </summary>
+        public MainVM()
+        {
+        }
     }
 }

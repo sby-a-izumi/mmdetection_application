@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -6,27 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace mmdetection_application
 {
-    
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// WindowData.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
-    {   
-        public Page? PageData { get; set; }
-        public Page? PageTrain { get; set; }
-        public Page? PageTest {  get; set; }
-
-        
-        public MainWindow()
+    public partial class WindowData : Window
+    {
+        public WindowData()
         {
             InitializeComponent();
         }
-
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -34,21 +30,21 @@ namespace mmdetection_application
                 this.DragMove();
             }
         }
-        private static MainWindow? _Instance;
-        public static MainWindow GetInstance()
+        private static WindowData? _Instance;
+        public static WindowData GetInstance()
         {
             if (_Instance != null)
             {
                 return _Instance;
             }
-            _Instance = new MainWindow();
+            _Instance = new WindowData();
             return _Instance;
         }
 
-        private void ClickData(object sender, RoutedEventArgs e)
+        private void ClickHome(object sender, RoutedEventArgs e)
         {
             GetInstance().Hide();
-            WindowData.GetInstance().Show();
+            MainWindow.GetInstance().Show();
         }
 
     }
