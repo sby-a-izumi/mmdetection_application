@@ -27,14 +27,18 @@
                         </StackPanel>
 
                         <!--Menu Buttons-->
-                        <uc:Menubutton Icon="HomeVariant" IsActive="True" />
+                        <uc:Menubutton Icon="HomeVariant" IsActive="True"/>
                         <uc:Menubutton Icon="DatabaseSyncOutline"/>
                         <uc:Menubutton Icon="brain"/>
                         <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>
                         <uc:Menubutton Icon="ChartBellCurveCumulative"/>
-                    </StackPanel>
 
-                    <uc:Menubutton Icon="Power" VerticalAlignment="Bottom"/>
+                        <Button x:Name="Home" Click="Home_Click">
+                            <uc:Menubutton Icon="Home" IsActive="True"/>
+                        </Button>
+                    </StackPanel>
+                    
+                    <uc:Menubutton Icon="Power" VerticalAlignment="Bottom" />
 
                 </Grid>
             </Border>

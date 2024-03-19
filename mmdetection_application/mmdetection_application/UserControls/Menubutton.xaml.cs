@@ -14,6 +14,10 @@ namespace mmdetection_application.UserControls
             InitializeComponent();
         }
 
+
+        /// <summary>
+        /// Iconプロパティの設定
+        /// </summary>
         public PackIconMaterialKind Icon
         {
             get { return (PackIconMaterialKind) GetValue(IconProperty); }
@@ -23,13 +27,18 @@ namespace mmdetection_application.UserControls
         public static readonly DependencyProperty IconProperty =
             DependencyProperty.Register("Icon", typeof(PackIconMaterialKind), typeof(Menubutton));
 
+        /// <summary>
+        /// IsActiveプロパティの設定
+        /// </summary>
         public bool IsActive
         {
-            get { return (bool)GetValue(IsActiveProperty); }
+            get { return (bool) GetValue(IsActiveProperty); }
             set { SetValue(IsActiveProperty, value); }
         }
 
         public static readonly DependencyProperty IsActiveProperty =
             DependencyProperty.Register("IsActive", typeof(bool), typeof(Menubutton));
+
+
     }
 }

@@ -21,6 +21,7 @@
             </Ellipse>
 
             <Icon:PackIconMaterial Kind="{Binding ElementName=menuButton,Path=Icon}" Style="{StaticResource menuButtonIcon}"/>
+            
         </Grid>
     </Button>
 </UserControl>

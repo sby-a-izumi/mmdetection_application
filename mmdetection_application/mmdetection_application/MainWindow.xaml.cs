@@ -15,7 +15,11 @@ namespace mmdetection_application
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    {   
+        public Page? PageData { get; set; }
+        public Page? PageTrain { get; set; }
+        public Page? PageTest {  get; set; }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,6 +31,11 @@ namespace mmdetection_application
             {
                 this.DragMove();
             }
+        }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Clicked!");
         }
     }
 }
