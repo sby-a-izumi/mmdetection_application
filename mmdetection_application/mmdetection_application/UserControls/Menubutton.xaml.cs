@@ -21,7 +21,7 @@ namespace mmdetection_application.UserControls
         }
 
         public static readonly DependencyProperty IconProperty =
-            DependencyProperty.Register("", typeof(PackIconMaterialKind), typeof(Menubutton));
+            DependencyProperty.Register("Icon", typeof(PackIconMaterialKind), typeof(Menubutton));
 
         public bool IsActive
         {

@@ -1,6 +1,8 @@
 ﻿<Window x:Class="mmdetection_application.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:uc="clr-namespace:mmdetection_application.UserControls"
+        xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         Title="MainWindow" Height="760" Width="1280" ResizeMode="NoResize" AllowsTransparency="True"
         WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent">
     <Border CornerRadius="25" Background="#151f2d" MouseDown="Border_MouseDown">
@@ -27,6 +29,17 @@
                             <Ellipse Width="8" Height="8" Fill="#009d00"/>
                         </StackPanel>
                     </StackPanel>
+                    
+                    <!--Menu Buttons-->
+                    <uc:Menubutton Icon="HomeVariant" IsActive="True" Loaded="Menubutton_Loaded"/>
+                    <uc:Menubutton Icon="Finance"/>
+                    <uc:Menubutton Icon="CommentMultipleOutline"/>
+                    <uc:Menubutton Icon="AccountSearchOutline"/>
+                    <uc:Menubutton Icon="BookSyncOutline"/>
+                    <uc:Menubutton Icon="AlertCircleCheckOutline"/>
+                    <uc:Menubutton Icon="CogOutline"/>
+
+
                 </Grid>
             </Border>
         </Grid>

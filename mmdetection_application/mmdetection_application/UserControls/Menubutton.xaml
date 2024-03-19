@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
              mc:Ignorable="d" d:DesignWidth="100" Name="menuButton">
     <Button Style="{StaticResource menuButton}">
         <Grid ClipToBounds="True">
@@ -20,7 +20,7 @@
                 </Ellipse.Style>
             </Ellipse>
 
-            <local:PackIconMaterial Kind="Tea"/>
+            <Icon:PackIconMaterial Kind="{Binding ElementName=menuButton,Path=Icon}" Style="{StaticResource menuButtonIcon}"/>
         </Grid>
     </Button>
 </UserControl>
