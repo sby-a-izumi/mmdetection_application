@@ -12,10 +12,15 @@
                     <Style TargetType="Ellipse">
                         <Setter Property="Visibility" Value="Visible"/>
                         <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=menuButton, Path=IsActive}" Value="True">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Ellipse.Style>
             </Ellipse>
+
+            <local:PackIconMaterial Kind="Tea"/>
         </Grid>
     </Button>
 </UserControl>
