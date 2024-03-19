@@ -39,6 +39,16 @@ namespace mmdetection_application.UserControls
         public static readonly DependencyProperty IsActiveProperty =
             DependencyProperty.Register("IsActive", typeof(bool), typeof(Menubutton));
 
+        /// <summary>
+        /// Clickプロパティの設定
+        /// </summary>
+        public string Click
+        {
+            get { return (string)GetValue(ClickProperty); }
+            set { SetValue(IsActiveProperty, value); }
+        }
 
+        public static readonly DependencyProperty ClickProperty =
+            DependencyProperty.Register("Click", typeof(string), typeof(Menubutton));
     }
 }

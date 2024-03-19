@@ -28,7 +28,7 @@
 
                         <!--Menu Buttons-->
                         <uc:Menubutton Icon="HomeVariant" IsActive="True"/>
-                        <Button x:Name="Data" Click="ClickData" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
+                        <Button x:Name="Data" Click="ClickData" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}"  >
                             <uc:Menubutton Icon="DatabaseSyncOutline" Width="100"/>
                         </Button>
                         <uc:Menubutton Icon="brain"/>
