@@ -18,7 +18,7 @@ namespace mmdetection_application.Views
     /// <summary>
     /// TrainView.xaml の相互作用ロジック
     /// </summary>
-    public partial class TrainView : Page
+    public partial class TrainView : UserControl
     {
         public TrainView()
         {
