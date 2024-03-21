@@ -34,7 +34,7 @@
                         <uc:Menubutton Icon="ChartBellCurveCumulative"/>
                     </StackPanel>
 
-                    <uc:Menubutton Icon="Power" VerticalAlignment="Bottom" />
+                    <uc:Menubutton Icon="CogOutline" VerticalAlignment="Bottom" />
                 </Grid>
             </Border>
 
@@ -44,6 +44,9 @@
             <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="20 0 0 0" HorizontalAlignment="Right">
                 <Button Style="{StaticResource topMenuButton}">
                     <Icon:PackIconMaterial Kind="minus" Style="{StaticResource topMenuButtonIcon}"/>
+                </Button>
+                <Button Style="{StaticResource topMenuButton}">
+                    <Icon:PackIconMaterial Kind="Close" Style="{StaticResource topMenuButtonIcon}"/>
                 </Button>
             </StackPanel>
         </Grid>
