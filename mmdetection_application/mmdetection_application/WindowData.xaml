@@ -29,9 +29,7 @@
                         </StackPanel>
 
                         <!--Menu Buttons-->
-                        <Button x:Name="Home" Click="ClickHome" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" >
-                            <uc:Menubutton Icon="HomeVariant" Width="100"/>
-                        </Button>
+                        <uc:Menubutton Icon="HomeVariant" ButtonBase.Click="ClickHome"/>
                         <uc:Menubutton Icon="DatabaseSyncOutline"  IsActive="True"/>
                         <uc:Menubutton Icon="brain"/>
                         <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>

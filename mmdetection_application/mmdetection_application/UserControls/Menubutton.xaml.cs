@@ -42,7 +42,7 @@ namespace mmdetection_application.UserControls
         /// <summary>
         /// Clickプロパティの設定
         /// </summary>
-        public string Click
+        public string ClickWindowPath
         {
             get { return (string)GetValue(ClickProperty); }
             set { SetValue(IsActiveProperty, value); }

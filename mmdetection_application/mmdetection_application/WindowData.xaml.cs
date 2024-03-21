@@ -47,5 +47,9 @@ namespace mmdetection_application
             MainWindow.GetInstance().Show();
         }
 
+        private void Menubutton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
