@@ -25,6 +25,7 @@ namespace mmdetection_application
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new Transition();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
