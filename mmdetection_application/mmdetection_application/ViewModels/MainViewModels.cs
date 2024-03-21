@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace mmdetection_application.VM
+namespace mmdetection_application.ViewModels
 {
-    class MainVM : NotificationObject
+    class MainViewModels : NotificationObject
     {
         /// <summary>
         /// MainVMのコンストラクタ
         /// </summary>
-        public MainVM()
+        public MainViewModels()
         {
         }
     }

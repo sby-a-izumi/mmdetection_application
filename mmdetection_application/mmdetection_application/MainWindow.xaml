@@ -9,7 +9,7 @@
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="100"/>
-                <ColumnDefinition Width="590"/>
+                <ColumnDefinition Width="1000"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -37,8 +37,9 @@
                     <uc:Menubutton Icon="CogOutline" VerticalAlignment="Bottom" />
                 </Grid>
             </Border>
-
-            <TextBlock Grid.Row="1" Grid.Column="1" Text="Home" FontSize="30" />
+            <Grid Grid.Row="1" Grid.Column="1">
+                <TextBlock Text="Home" FontSize="40" Foreground="White"/>
+            </Grid>
 
             <!--Application Buttons-->
             <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="20 0 0 0" HorizontalAlignment="Right">
