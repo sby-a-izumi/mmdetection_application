@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:uc="clr-namespace:mmdetection_application.UserControls"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:vm="clr-namespace:mmdetection_application.ViewModels"
+        xmlns:view="clr-namespace:mmdetection_application.Views"
         Height="760" Width="1280" ResizeMode="NoResize" AllowsTransparency="True"
         WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent">
     <Border CornerRadius="25" Background="#151719" MouseDown="Border_MouseDown">
@@ -37,8 +39,17 @@
                     <uc:Menubutton Icon="CogOutline" VerticalAlignment="Bottom" />
                 </Grid>
             </Border>
+            
+            <!--MainPage-->
             <Grid Grid.Row="1" Grid.Column="1">
-                <TextBlock Text="Home" FontSize="40" Foreground="White"/>
+                <Grid.Resources>
+                    <DataTemplate DataType="{x:Type vm:HomeViewModel}">
+                        <view:HomeView/>
+                    </DataTemplate>
+                    <DataTemplate DataType="{x:Type vm:TrainViewModel}">
+                        <view:TrainView/>
+                    </DataTemplate>
+                </Grid.Resources>
             </Grid>
 
             <!--Application Buttons-->
