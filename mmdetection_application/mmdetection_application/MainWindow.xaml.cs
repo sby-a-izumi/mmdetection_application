@@ -45,11 +45,25 @@ namespace mmdetection_application
             return _Instance;
         }
 
+        /// <summary>
+        /// データ画面に遷移するためのイベントハンドラ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickData(object sender, RoutedEventArgs e)
         {
             GetInstance().Hide();
             WindowData.GetInstance().Show();
         }
 
+        /// <summary>
+        /// アプリケーションを終了するためのイベントハンドラ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickClose(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

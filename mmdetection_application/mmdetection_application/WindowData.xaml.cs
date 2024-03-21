@@ -41,15 +41,25 @@ namespace mmdetection_application
             return _Instance;
         }
 
+        /// <summary>
+        /// ホーム画面に遷移するためのイベントハンドラ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ClickHome(object sender, RoutedEventArgs e)
         {
             GetInstance().Hide();
             MainWindow.GetInstance().Show();
         }
 
-        private void Menubutton_Click(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// アプリケーションを終了するためのイベントハンドラ
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ClickClose(object sender, RoutedEventArgs e)
         {
-
+            Application.Current.Shutdown();
         }
     }
 }

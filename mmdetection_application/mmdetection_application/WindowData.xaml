@@ -48,7 +48,7 @@
                 <Button Style="{StaticResource topMenuButton}">
                     <Icon:PackIconMaterial Kind="minus" Style="{StaticResource topMenuButtonIcon}"/>
                 </Button>
-                <Button Style="{StaticResource topMenuButton}">
+                <Button Style="{StaticResource topMenuButton}" Click="ClickClose">
                     <Icon:PackIconMaterial Kind="Close" Style="{StaticResource topMenuButtonIcon}"/>
                 </Button>
             </StackPanel>
