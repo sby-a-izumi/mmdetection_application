@@ -8,15 +8,9 @@
       d:DesignHeight="700" d:DesignWidth="1000"
       Title="PageTrain">
 
-    <DockPanel>
-        <DockPanel DockPanel.Dock="Bottom"/>
-        <DockPanel DockPanel.Dock="Top">
-            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="10">
-                <TextBlock Text="Train" FontSize="100" Foreground="White"/>
-            </StackPanel>
-        </DockPanel>
-        <Grid>
-            <TextBlock Text="Choose model." FontSize="30" Foreground="White"/>
-        </Grid>
-    </DockPanel>
+
+    <StackPanel>
+        <TextBlock Text="Train" FontSize="40" Foreground="White"/>
+        <TextBlock Text="Choose model." FontSize="20" Foreground="White"/>
+    </StackPanel>
 </Page>

@@ -8,15 +8,8 @@
       d:DesignHeight="700" d:DesignWidth="1000"
       Title="PageData">
 
-    <DockPanel>
-        <DockPanel DockPanel.Dock="Bottom"/>
-        <DockPanel DockPanel.Dock="Top">
-            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="10">
-                <TextBlock Text="Data" FontSize="100" Foreground="White"/>
-            </StackPanel>
-        </DockPanel>
-        <Grid>
-            <TextBlock Text="Convert annotation data format." FontSize="30" Foreground="White"/>
-        </Grid>
-    </DockPanel>
+    <StackPanel>
+        <TextBlock Text="Data" FontSize="40" Foreground="White"/>
+        <TextBlock Text="Convert annotation data format." FontSize="20" Foreground="White"/>
+    </StackPanel>
 </Page>

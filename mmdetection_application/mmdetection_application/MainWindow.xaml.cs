@@ -18,9 +18,6 @@ namespace mmdetection_application
     /// </summary>
     public partial class MainWindow : Window
     {   
-        public Page? PageData { get; set; }
-        public Page? PageTrain { get; set; }
-        public Page? PageTest {  get; set; }
 
         
         public MainWindow()
@@ -34,16 +31,6 @@ namespace mmdetection_application
             {
                 this.DragMove();
             }
-        }
-        private static MainWindow? _Instance;
-        public static MainWindow GetInstance()
-        {
-            if (_Instance != null)
-            {
-                return _Instance;
-            }
-            _Instance = new MainWindow();
-            return _Instance;
         }
 
 
@@ -59,17 +46,17 @@ namespace mmdetection_application
 
         private void ClickHome(object sender, RoutedEventArgs e)
         {
-            contentFrame.Navigate(typeof(PageHome));
+            contentFrame.Navigate(new PageHome());
         }
 
         private void ClickData(object sender, RoutedEventArgs e)
         {
-            contentFrame.Navigate(typeof(PageData));
+            contentFrame.Navigate(new PageData());
         }
 
         private void ClickTrain(object sender, RoutedEventArgs e)
         {
-            contentFrame.Navigate(typeof(PageTrain));
+            contentFrame.Navigate(new PageTrain());
         }
     }
 }

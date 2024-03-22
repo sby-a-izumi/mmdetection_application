@@ -8,15 +8,9 @@
       d:DesignHeight="700" d:DesignWidth="1000"
       Title="PageHome">
 
-    <DockPanel>
-        <DockPanel DockPanel.Dock="Bottom"/>
-        <DockPanel DockPanel.Dock="Top">
-            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="10">
-                <TextBlock Text="Home" FontSize="100" Foreground="White"/>
-            </StackPanel>
-        </DockPanel>
-        <Grid>
-            <TextBlock Text="Super epic ultimate dominating UI" FontSize="30" Foreground="White"/>
-        </Grid>
-    </DockPanel>
+
+    <StackPanel>
+        <TextBlock Text="Home" FontSize="40" Foreground="White"/>
+        <TextBlock Text="Hello world." FontSize="20" Foreground="White"/>
+    </StackPanel>
 </Page>

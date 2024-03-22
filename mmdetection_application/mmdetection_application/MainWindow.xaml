@@ -42,7 +42,7 @@
             
             <!--MainPage-->
             <Grid Grid.Row="1" Grid.Column="1">
-                <Frame x:Name="contentFrame"/>
+                <Frame NavigationUIVisibility="Hidden" x:Name="contentFrame"/>
             </Grid>
 
             <!--Application Buttons-->
