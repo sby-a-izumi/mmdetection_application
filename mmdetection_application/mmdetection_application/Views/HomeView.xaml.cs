@@ -18,7 +18,7 @@ namespace mmdetection_application.Views
     /// <summary>
     /// HomeView.xaml の相互作用ロジック
     /// </summary>
-    public partial class HomeView : Page
+    public partial class HomeView : UserControl
     {
         public HomeView()
         {
