@@ -19,9 +19,8 @@ namespace mmdetection_application.ViewModels
             }
         }
 
-        public MainViewModels(string title)
+        public MainViewModels()
         {
-            Title = title;
         }
         public string Title { get; private set; }
     }

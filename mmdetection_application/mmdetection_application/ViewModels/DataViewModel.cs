@@ -8,6 +8,5 @@ namespace mmdetection_application.ViewModels
 {
     public class DataViewModel : MainViewModels
     {
-
     }
 }

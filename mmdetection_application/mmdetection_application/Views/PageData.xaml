@@ -1,0 +1,22 @@
+﻿<Page x:Class="mmdetection_application.Views.PageData"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:mmdetection_application.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      Title="PageData">
+
+    <DockPanel>
+        <DockPanel DockPanel.Dock="Bottom"/>
+        <DockPanel DockPanel.Dock="Top">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="10">
+                <TextBlock Text="Data" FontSize="100" Foreground="White"/>
+            </StackPanel>
+        </DockPanel>
+        <Grid>
+            <TextBlock Text="Convert annotation data format." FontSize="30" Foreground="White"/>
+        </Grid>
+    </DockPanel>
+</Page>

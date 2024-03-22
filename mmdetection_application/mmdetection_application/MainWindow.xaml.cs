@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using mmdetection_application.Views;
 
 namespace mmdetection_application
 {
@@ -25,7 +26,6 @@ namespace mmdetection_application
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = new Transition();
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -46,16 +46,6 @@ namespace mmdetection_application
             return _Instance;
         }
 
-        /// <summary>
-        /// データ画面に遷移するためのイベントハンドラ
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void ClickData(object sender, RoutedEventArgs e)
-        {
-            GetInstance().Hide();
-            WindowData.GetInstance().Show();
-        }
 
         /// <summary>
         /// アプリケーションを終了するためのイベントハンドラ
@@ -65,6 +55,21 @@ namespace mmdetection_application
         private void ClickClose(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();
+        }
+
+        private void ClickHome(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(PageHome));
+        }
+
+        private void ClickData(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(PageData));
+        }
+
+        private void ClickTrain(object sender, RoutedEventArgs e)
+        {
+            contentFrame.Navigate(typeof(PageTrain));
         }
     }
 }

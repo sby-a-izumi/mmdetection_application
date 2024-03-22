@@ -10,10 +10,6 @@ namespace mmdetection_application
     public class Transition:MainViewModels
     {
 
-        public Transition():base("MainView")
-        {
-
-        }
 
         private IList<MainViewModels> _contents;
         public IList<MainViewModels> Contents

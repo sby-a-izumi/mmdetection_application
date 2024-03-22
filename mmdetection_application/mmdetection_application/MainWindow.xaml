@@ -29,9 +29,9 @@
                         </StackPanel>
 
                         <!--Menu Buttons-->
-                        <uc:Menubutton Icon="HomeVariant" IsActive="True"/>
+                        <uc:Menubutton Icon="HomeVariant" IsActive="True" ButtonBase.Click="ClickHome"/>
                         <uc:Menubutton Icon="DatabaseSyncOutline" ButtonBase.Click="ClickData"/>
-                        <uc:Menubutton Icon="brain"/>
+                        <uc:Menubutton Icon="brain" ButtonBase.Click="ClickTrain"/>
                         <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>
                         <uc:Menubutton Icon="ChartBellCurveCumulative"/>
                     </StackPanel>
@@ -42,18 +42,7 @@
             
             <!--MainPage-->
             <Grid Grid.Row="1" Grid.Column="1">
-                <Grid.Resources>
-                    <DataTemplate DataType="{x:Type vm:HomeViewModel}">
-                        <view:HomeView/>
-                    </DataTemplate>
-                    <DataTemplate DataType="{x:Type vm:DataViewModel}">
-                        <view:DataView/>
-                    </DataTemplate>
-                    <DataTemplate DataType="{x:Type vm:TrainViewModel}">
-                        <view:TrainView/>
-                    </DataTemplate>
-                </Grid.Resources>
-                <ContentControl Content="{Binding ActiveContent}"/>
+                <Frame x:Name="contentFrame"/>
             </Grid>
 
             <!--Application Buttons-->
