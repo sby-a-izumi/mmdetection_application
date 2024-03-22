@@ -9,11 +9,25 @@ namespace mmdetection_application
     using ViewModels;
     public class Transition:MainViewModels
     {
-        public Transition()
+
+        public Transition():base("MainView")
         {
-            HomeViewModel = new HomeViewModel();
-            ActiveContent = HomeViewModel;
+
         }
+
+        private IList<MainViewModels> _contents;
+        public IList<MainViewModels> Contents
+        {
+            get { return _contents ?? (_contents = CreateContents().ToArray()); }
+        }
+
+        private IEnumerable<MainViewModels> CreateContents()
+        {
+            yield return new HomeViewModel();
+            yield return new DataViewModel();
+            yield return new TrainViewModel();
+        }
+
         private MainViewModels? _activeContent;
         public MainViewModels? ActiveContent
         {
@@ -27,19 +41,7 @@ namespace mmdetection_application
                 }
             }
         }
-        HomeViewModel? _homeViewModel;
-        public HomeViewModel? HomeViewModel
-        {
-            get { return _homeViewModel; }
-            set
-            {
-                if (_homeViewModel != value)
-                {
-                    _homeViewModel = value;
-                    RaisePropertyChanged(nameof(HomeViewModel));
-                }
-            }
-        }
+        public HomeViewModel HomeViewModel { get { return Contents.First() as HomeViewModel; } }   
     }
 
     

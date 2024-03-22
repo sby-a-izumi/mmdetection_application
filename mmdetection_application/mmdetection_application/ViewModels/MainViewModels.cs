@@ -18,5 +18,11 @@ namespace mmdetection_application.ViewModels
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+
+        public MainViewModels(string title)
+        {
+            Title = title;
+        }
+        public string Title { get; private set; }
     }
 }

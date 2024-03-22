@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mmdetection_application.ViewModels
 {
-    public class HomeViewModel : MainViewModels
+    public class DataViewModel : MainViewModels
     {
 
     }

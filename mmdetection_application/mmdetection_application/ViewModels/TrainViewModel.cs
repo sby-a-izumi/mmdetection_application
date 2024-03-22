@@ -8,5 +8,6 @@ namespace mmdetection_application.ViewModels
 {
     public class TrainViewModel : MainViewModels
     {
+
     }
 }
