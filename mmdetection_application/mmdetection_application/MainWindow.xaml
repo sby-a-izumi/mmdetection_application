@@ -4,7 +4,7 @@
         xmlns:uc="clr-namespace:mmdetection_application.UserControls"
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:vm="clr-namespace:mmdetection_application.ViewModels"
-        xmlns:view="clr-namespace:mmdetection_application.Views"
+        xmlns:view="clr-namespace:mmdetection_application.Views" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
         Height="760" Width="1280" ResizeMode="NoResize" AllowsTransparency="True"
         WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent">
     <Border CornerRadius="25" Background="#151719" MouseDown="Border_MouseDown">
@@ -29,7 +29,7 @@
                         </StackPanel>
 
                         <!--Menu Buttons-->
-                        <uc:Menubutton Icon="HomeVariant" IsActive="True" ButtonBase.Click="ClickHome"/>
+                        <uc:Menubutton Icon="HomeVariant" ButtonBase.Click="ClickHome"/>
                         <uc:Menubutton Icon="DatabaseSyncOutline" ButtonBase.Click="ClickData"/>
                         <uc:Menubutton Icon="brain" ButtonBase.Click="ClickTrain"/>
                         <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>
