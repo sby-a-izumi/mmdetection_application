@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -24,7 +25,13 @@ namespace mmdetection_application
         public MainWindow()
         {
             InitializeComponent();
+
+            this._vm = new MainWindowViewModel();
+
             contentFrame.Navigate(new PageHome());
+            IsActiveHome = true;
+            IsActiveData = false;
+            IsActiveTrain = false;
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -35,6 +42,22 @@ namespace mmdetection_application
             }
         }
 
+        public bool IsActiveHome
+        {
+            get { return _vm.IsActiveHome; }
+            set { _vm.IsActiveHome = value; }
+        }
+        public bool IsActiveData
+        {
+            get { return _vm.IsActiveData; }
+            set { _vm.IsActiveData = value; }
+        }
+        public bool IsActiveTrain
+        {
+            get { return _vm.IsActiveTrain; }
+            set { _vm.IsActiveTrain = value; }
+        }
+        
 
         /// <summary>
         /// アプリケーションを終了するためのイベントハンドラ
@@ -50,16 +73,27 @@ namespace mmdetection_application
         private void ClickHome(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(new PageHome());
+            IsActiveHome = true;
+            IsActiveData = false;
+            IsActiveTrain = false;
         }
 
         private void ClickData(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(new PageData());
+            IsActiveHome = false;
+            IsActiveData = true;
+            IsActiveTrain = false;
         }
 
         private void ClickTrain(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(new PageTrain());
+            IsActiveHome = false;
+            IsActiveData = false;
+            IsActiveTrain = true;
         }
+
+        private MainWindowViewModel _vm;
     }
 }

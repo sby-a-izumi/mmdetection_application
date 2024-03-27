@@ -27,10 +27,9 @@
                         <!--Ellipses-->
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 40">
                         </StackPanel>
-
                         <!--Menu Buttons-->
-                        <uc:Menubutton Icon="HomeVariant" ButtonBase.Click="ClickHome"/>
-                        <uc:Menubutton Icon="DatabaseSyncOutline" ButtonBase.Click="ClickData"/>
+                        <uc:Menubutton Icon="HomeVariant" ButtonBase.Click="ClickHome" IsActive="{Binding IsActiveHome, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                        <uc:Menubutton Icon="DatabaseSyncOutline" ButtonBase.Click="ClickData" IsActive="{Binding IsActiveData}"/>
                         <uc:Menubutton Icon="brain" ButtonBase.Click="ClickTrain"/>
                         <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>
                         <uc:Menubutton Icon="ChartBellCurveCumulative"/>
