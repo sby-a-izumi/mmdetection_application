@@ -69,10 +69,15 @@ namespace mmdetection_application
             Application.Current.Shutdown();
         }
 
+        private void ClickMinimize(object sender, RoutedEventArgs e)
+        {
+
+        }
 
         private void ClickHome(object sender, RoutedEventArgs e)
         {
             contentFrame.Navigate(new PageHome());
+
             IsActiveHome = true;
             IsActiveData = false;
             IsActiveTrain = false;

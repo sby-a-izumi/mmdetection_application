@@ -46,7 +46,7 @@
 
             <!--Application Buttons-->
             <StackPanel Orientation="Horizontal" Grid.Column="2" Margin="20 0 0 0" HorizontalAlignment="Right">
-                <Button Style="{StaticResource topMenuButton}">
+                <Button Style="{StaticResource topMenuButton}" Click="ClickMinimize">
                     <Icon:PackIconMaterial Kind="minus" Style="{StaticResource topMenuButtonIcon}"/>
                 </Button>
                 <Button Style="{StaticResource topMenuButton}" Click="ClickClose">
