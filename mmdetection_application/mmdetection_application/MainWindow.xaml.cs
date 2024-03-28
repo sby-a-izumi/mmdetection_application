@@ -10,6 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using mmdetection_application.UserControls;
+using mmdetection_application.ViewModels;
 using mmdetection_application.Views;
 
 namespace mmdetection_application
@@ -26,6 +27,7 @@ namespace mmdetection_application
         {
             InitializeComponent();
 
+            this._datavm = new DataViewModel();
             this._vm = new MainWindowViewModel();
 
             contentFrame.Navigate(new PageHome());
@@ -85,7 +87,9 @@ namespace mmdetection_application
 
         private void ClickData(object sender, RoutedEventArgs e)
         {
-            contentFrame.Navigate(new PageData());
+            var pageData = new PageData();
+            pageData.DataContext = _datavm;
+            contentFrame.Navigate(pageData);
             IsActiveHome = false;
             IsActiveData = true;
             IsActiveTrain = false;
@@ -99,6 +103,7 @@ namespace mmdetection_application
             IsActiveTrain = true;
         }
 
+        private DataViewModel _datavm;
         private MainWindowViewModel _vm;
     }
 }
