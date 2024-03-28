@@ -8,9 +8,70 @@
       d:DesignHeight="700" d:DesignWidth="1000"
       Title="PageTrain">
 
-
-    <StackPanel>
-        <TextBlock Text="Train" FontSize="40" Foreground="White"/>
-        <TextBlock Text="Choose model." FontSize="20" Foreground="White"/>
-    </StackPanel>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="650"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <TextBlock Text="Train" FontSize="40" Foreground="White"/>
+            <TextBlock Text="1. Choose model." FontSize="20" Foreground="White" Margin="0,20,0,0"/>
+            <StackPanel Margin ="10">
+                <RadioButton Content="RetinaNet-r50" FontSize="15" Foreground="White"/>
+                <RadioButton Content="rtmdet-tiny" FontSize="15" Foreground="White"/>
+                <RadioButton Content="rtmdet-small" FontSize="15" Foreground="White" IsChecked="True"/>
+                <RadioButton Content="rmtdet-medium" FontSize="15" Foreground="White"/>
+                <RadioButton Content="rtmdet-large" FontSize="15" Foreground="White"/>
+            </StackPanel>
+            <TextBlock Text="2. Set Config file." FontSize="20" Foreground="White" Margin="0,20,0,0"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Config file :" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                <Button Content="Open File" Height="20" HorizontalAlignment="Left" Margin="12,12,0,0" Name="button1" VerticalAlignment="Top" Width="100" />
+                <TextBox Text="rtmdet-small.pth" Width="100" Margin="12,12,0,0" IsReadOnly="True"/>
+            </StackPanel>
+            <TextBlock Text="3. Select data for training." FontSize="20" Foreground="White" Margin="0,20,0,0"/>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Train data :" Width="110" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <Button Content="Open Folder" Height="20" HorizontalAlignment="Left" Margin="12,12,0,0" Name="button2" VerticalAlignment="Top" Width="100" />
+                    <TextBox Text="data/train" Width="100" Margin="12,12,0,0" IsReadOnly="True" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Validation data :" Width="110" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <Button Content="Open Folder" Height="20" HorizontalAlignment="Left" Margin="12,12,0,0" Name="button3" VerticalAlignment="Top" Width="100" />
+                    <TextBox Text="data/val" Width="100" Margin="12,12,0,0" IsReadOnly="True" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Test data :" Width="110" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <Button Content="Open Folder" Height="20" HorizontalAlignment="Left" Margin="12,12,0,0" Name="button4" VerticalAlignment="Top" Width="100" />
+                    <TextBox Text="data/train" Width="100" Margin="12,12,0,0" IsReadOnly="True" />
+                </StackPanel>
+            </StackPanel>
+            <TextBlock Text="4. Set HyperParamerter." FontSize="20" Foreground="White" Margin="0,20,0,0"/>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Larning late :" Width="120" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <TextBox  Width="100" Height="20" Margin="12,12,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Batch size :" Width="120" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <TextBox Width="100" Height="20" Margin="12,12,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Weight decay :" Width="120" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <TextBox Width="100" Height="20" Margin="12,12,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Max epocks :" Width="120" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <TextBox Width="100" Height="20" Margin="12,12,0,0"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="Log interval :" Width="120" FontSize="15" Margin="12,12,0,0" Foreground="White"/>
+                    <TextBox Width="100" Height="20" Margin="12,12,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            
+            <Button Content="Apply" Width="100" Margin="0,20,0,0" Background="LawnGreen"/>
+        </StackPanel>
+    </Grid>
 </Page>
