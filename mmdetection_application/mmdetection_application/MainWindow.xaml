@@ -24,10 +24,12 @@
             <Border Grid.RowSpan="3" Background="#202124" CornerRadius="25 0 0 25">
                 <Grid>
                     <StackPanel VerticalAlignment="Top">
+                        
                         <!--Ellipses-->
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 40">
                         </StackPanel>
                         <!--Menu Buttons-->
+                        <Image Source="/mmrun-logo-only.png" VerticalAlignment="Top" Margin="20,20,20,20"/>
                         <uc:Menubutton Icon="HomeVariant" ButtonBase.Click="ClickHome" IsActive="{Binding IsActiveHome, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
                         <uc:Menubutton Icon="DatabaseSyncOutline" ButtonBase.Click="ClickData" IsActive="{Binding IsActiveData}"/>
                         <uc:Menubutton Icon="brain" ButtonBase.Click="ClickTrain"/>

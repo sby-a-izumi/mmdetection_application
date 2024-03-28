@@ -12,5 +12,6 @@
     <StackPanel>
         <TextBlock Text="Home" FontSize="40" Foreground="White"/>
         <TextBlock Text="GUI Application to use MMDetection." FontSize="20" Foreground="White"/>
+        <Image Source="/Views/logo-no-background.png" Height="104" Width="716" />
     </StackPanel>
 </Page>

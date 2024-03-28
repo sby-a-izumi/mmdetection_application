@@ -9,7 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="mmrun-logo-only.png" />
+    <None Remove="Views\logo-no-background.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="4.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="mmrun-logo-only.png" />
+    <Resource Include="Views\logo-no-background.png" />
   </ItemGroup>
 
 </Project>
