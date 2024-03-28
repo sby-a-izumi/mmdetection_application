@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="logo-no-background.png" />
     <None Remove="mmrun-logo-only.png" />
     <None Remove="Views\logo-no-background.png" />
   </ItemGroup>
@@ -18,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="logo-no-background.png" />
     <Resource Include="mmrun-logo-only.png" />
     <Resource Include="Views\logo-no-background.png" />
   </ItemGroup>

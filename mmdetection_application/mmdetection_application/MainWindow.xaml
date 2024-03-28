@@ -5,12 +5,12 @@
         xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:vm="clr-namespace:mmdetection_application.ViewModels"
         xmlns:view="clr-namespace:mmdetection_application.Views" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        Height="760" Width="1280" ResizeMode="NoResize" AllowsTransparency="True"
+        Height="760" Width="1420" ResizeMode="NoResize" AllowsTransparency="True"
         WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent">
     <Border CornerRadius="25" Background="#151719" MouseDown="Border_MouseDown">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="240"/>
                 <ColumnDefinition Width="1000"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
@@ -29,15 +29,36 @@
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 30 0 40">
                         </StackPanel>
                         <!--Menu Buttons-->
-                        <Image Source="/mmrun-logo-only.png" VerticalAlignment="Top" Margin="20,20,20,20"/>
-                        <uc:Menubutton Icon="HomeVariant" ButtonBase.Click="ClickHome" IsActive="{Binding IsActiveHome, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
-                        <uc:Menubutton Icon="DatabaseSyncOutline" ButtonBase.Click="ClickData" IsActive="{Binding IsActiveData}"/>
-                        <uc:Menubutton Icon="brain" ButtonBase.Click="ClickTrain"/>
-                        <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>
-                        <uc:Menubutton Icon="ChartBellCurveCumulative" IsActive="True"/>
+                        <Image Source="/logo-no-background.png" Margin="15,5,15,5"/>
+                        <StackPanel Orientation="Horizontal">
+                            <uc:Menubutton Icon="HomeVariant" HorizontalAlignment="Left" Width="100" ButtonBase.Click="ClickHome" IsActive="{Binding IsActiveHome, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}"/>
+                            <TextBlock Text="Home" FontSize="20" Foreground="#edeeee" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <uc:Menubutton Icon="DatabaseSyncOutline" HorizontalAlignment="Left" Width="100" ButtonBase.Click="ClickData" IsActive="{Binding IsActiveData}"/>
+                            <TextBlock Text="Data" FontSize="20" Foreground="#edeeee" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <uc:Menubutton Icon="Brain" HorizontalAlignment="Left" Width="100" ButtonBase.Click="ClickTrain"/>
+                            <TextBlock Text="Training" FontSize="20" Foreground="#edeeee" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <uc:Menubutton Icon="PictureInPictureBottomRightOutline" HorizontalAlignment="Left" Width="100"/>
+                            <TextBlock Text="Inference" FontSize="20" Foreground="#edeeee" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <uc:Menubutton Icon="ChartBellCurveCumulative" HorizontalAlignment="Left" Width="100"/>
+                            <TextBlock Text="Analysis" FontSize="20" Foreground="#edeeee" VerticalAlignment="Center"/>
+                        </StackPanel>
+                        
+                        
+                        
                     </StackPanel>
-
-                    <uc:Menubutton Icon="CogOutline" VerticalAlignment="Bottom" />
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                        <uc:Menubutton Icon="CogOutline" HorizontalAlignment="Left" Width="100" />
+                        <TextBlock Text="Setting" FontSize="20" Foreground="#edeeee" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    
                 </Grid>
             </Border>
             
