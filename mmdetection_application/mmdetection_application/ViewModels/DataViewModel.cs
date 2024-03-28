@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace mmdetection_application.ViewModels
 {
-    public class DataViewModel : MainViewModels
+    internal class DataViewModel : MainViewModels
     {
+        private string? _nameOpenFile = "Init";
+        public string? NameOpenFile
+        {
+            get { return this._nameOpenFile; }
+            set { SetProperty(ref this._nameOpenFile, value); }
+        }
     }
 }
