@@ -10,6 +10,9 @@
 
     <StackPanel>
         <TextBlock Text="Data" FontSize="40" Foreground="White"/>
-        <TextBlock Text="Convert annotation data format." FontSize="20" Foreground="White"/>
+        <TextBlock Text="Convert annotation data format." FontSize="20" Foreground="White"/> 
+        <Button Content="変換前のデータを選択してください。(json)" Height="20" HorizontalAlignment="Left" Margin="12,12,0,0" Name="button1" VerticalAlignment="Top" Width="200" Click="button1_Click" />
+        <TextBox Text="{Binding NameOpenFile, UpdateSourceTrigger=PropertyChanged, Mode=OneWay}" IsReadOnly="True"  FontSize="10" Foreground="Black"/>
+        <TextBlock Text="aaa" FontSize="10" Foreground="White"/>
     </StackPanel>
 </Page>
