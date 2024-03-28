@@ -32,7 +32,7 @@
                         <uc:Menubutton Icon="DatabaseSyncOutline" ButtonBase.Click="ClickData" IsActive="{Binding IsActiveData}"/>
                         <uc:Menubutton Icon="brain" ButtonBase.Click="ClickTrain"/>
                         <uc:Menubutton Icon="PictureInPictureBottomRightOutline"/>
-                        <uc:Menubutton Icon="ChartBellCurveCumulative"/>
+                        <uc:Menubutton Icon="ChartBellCurveCumulative" IsActive="True"/>
                     </StackPanel>
 
                     <uc:Menubutton Icon="CogOutline" VerticalAlignment="Bottom" />
